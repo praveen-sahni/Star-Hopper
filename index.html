@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10142d" />
+    <title>Star Hopper</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">ONE BUTTON ARCADE</p>
+          <h1>STAR HOPPER</h1>
+        </div>
+        <button class="sound-button" id="soundButton" aria-label="Toggle sound">♪</button>
+      </header>
+
+      <section class="game-frame" aria-label="Star Hopper game">
+        <canvas id="game" aria-label="Game area"></canvas>
+        <div class="hud" aria-live="polite">
+          <div><span>SCORE</span><strong id="score">000</strong></div>
+          <div><span>BEST</span><strong id="best">000</strong></div>
+        </div>
+        <div class="screen start-screen" id="startScreen">
+          <div class="planet-icon">✦</div>
+          <h2>Hop the void.</h2>
+          <p>Ride falling stardust. Dodge the dark matter.</p>
+          <button class="play-button" id="playButton">PLAY <span>↗</span></button>
+          <small>SPACE / CLICK / TAP TO JUMP</small>
+        </div>
+        <div class="screen game-over hidden" id="gameOver">
+          <p class="eyebrow">RUN COMPLETE</p>
+          <h2 id="endTitle">Nice flight!</h2>
+          <p>You traveled <strong id="endScore">0</strong> light years.</p>
+          <button class="play-button" id="retryButton">TRY AGAIN <span>↗</span></button>
+        </div>
+      </section>
+
+      <footer>
+        <span>COLLECT <b>✦</b> FOR +5</span>
+        <span>AVOID <b class="danger">✹</b> DARK MATTER</span>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
